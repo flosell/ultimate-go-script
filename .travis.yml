@@ -1,0 +1,6 @@
+language: minimal
+install:
+  - ./go download-bats
+script:
+  - PATH="${PATH}:./bats/bin"
+
