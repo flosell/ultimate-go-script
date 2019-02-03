@@ -3,6 +3,7 @@ services:
   - docker
 install:
   - git clone https://github.com/bats-core/bats-core.git && cd bats-core && sudo ./install.sh /usr && cd -
+  - docker pull alpine:3.7 # FIXME: dirty workaround so test doesn't fail when needing to pull image
 script:
   - ./go test
   - ./go lint
