@@ -6,7 +6,7 @@ goal_basic-successful() {
   echo "Hello World"
 }
 goal_basic-failing() {
-  echo "Running"
+  echo "Running..."
   cd /tmp/this-does-not-exist-we-should-fail
   echo "Shouldn't run anymore"
 }
