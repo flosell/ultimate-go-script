@@ -2,5 +2,6 @@ language: minimal
 install:
   - ./go download-bats
 script:
-  - PATH="${PATH}:./bats/bin"
+  - PATH="${PATH}:./bats/bin ./go test"
+  - PATH="${PATH}:./bats/bin ./go lint"
 
