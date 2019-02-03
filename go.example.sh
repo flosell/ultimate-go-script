@@ -17,8 +17,7 @@ if type -t "goal_$1" &>/dev/null; then
 else
   echo "usage: $0 <goal>
 goal:
-    test     -- Run all tests
-    lint     -- Run linter
-    pre-push -- Run all checks that should run before pushing code to master"
+    basic-successful     -- a basic, successful goal
+    basic-failing        -- a basic, failing goal"
   exit 1
 fi
