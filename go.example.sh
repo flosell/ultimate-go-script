@@ -2,9 +2,19 @@
 
 set -e
 
+docker_run() {
+  docker run --rm \
+             ${image_id} "$@"
+}
+
+goal_basic-containerized-successful() {
+  image_id="alpine:3.7" docker_run cat /etc/alpine-release
+}
+
 goal_basic-successful() {
   echo "Hello World"
 }
+
 goal_basic-failing() {
   echo "Running..."
   cd /tmp/this-does-not-exist-we-should-fail
