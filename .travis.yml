@@ -1,6 +1,6 @@
 language: minimal
 install:
-  - git clone https://github.com/sstephenson/bats.git && cd bats && sudo ./install.sh /usr && cd - 
+  - git clone https://github.com/sstephenson/bats.git && cd bats && sudo ./install.sh /usr && cd -
 script:
   - ./go test
   - ./go lint
