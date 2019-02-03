@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
+# FIXME: shellcheck warnings
+
 set -e
 
 docker_run() {
+  # shellcheck disable=SC2154,SC2086
   docker run --rm \
              ${image_id} "$@"
 }
