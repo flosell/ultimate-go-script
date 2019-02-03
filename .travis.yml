@@ -1,7 +1,7 @@
 language: minimal
 install:
-  - ./go download-bats
+  - git clone https://github.com/sstephenson/bats.git && cd bats && sudo ./install.sh /usr
 script:
-  - PATH="${PATH}:./bats/bin ./go test"
-  - PATH="${PATH}:./bats/bin ./go lint"
+  - ./go test
+  - ./go lint
 
